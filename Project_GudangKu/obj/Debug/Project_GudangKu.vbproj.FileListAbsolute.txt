@@ -12,3 +12,4 @@ C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Proje
 C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.form_login.resources
 C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.Form_main_menu.resources
 C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.Form_Data_Barang.resources
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.Form_barang_baru.resources

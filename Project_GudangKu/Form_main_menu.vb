@@ -42,11 +42,13 @@
     Private Sub bt_dbm_Click(sender As Object, e As EventArgs) Handles bt_dbm.Click
         With Form_Data_Barang
             .l_jud.Text = bt_dbm.Text
+            .btn_daftar.Visible = True
             .ShowDialog()
         End With
     End Sub
     Private Sub btn_dbk_Click(sender As Object, e As EventArgs) Handles btn_dbk.Click
         With Form_Data_Barang
+            .btn_daftar.Visible = False
             .l_jud.Text = btn_dbk.Text
             .ShowDialog()
         End With
