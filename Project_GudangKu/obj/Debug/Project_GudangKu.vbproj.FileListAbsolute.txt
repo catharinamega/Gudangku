@@ -1,0 +1,14 @@
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\bin\Debug\Project_GudangKu.exe.config
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\bin\Debug\Project_GudangKu.exe
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\bin\Debug\Project_GudangKu.pdb
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\bin\Debug\Project_GudangKu.xml
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.vbprojAssemblyReference.cache
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.Resources.resources
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.vbproj.GenerateResource.cache
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.vbproj.CoreCompileInputs.cache
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.exe
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.xml
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.pdb
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.form_login.resources
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.Form_main_menu.resources
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.Form_Data_Barang.resources
