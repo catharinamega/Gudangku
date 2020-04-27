@@ -45,4 +45,10 @@
             .ShowDialog()
         End With
     End Sub
+    Private Sub btn_dbk_Click(sender As Object, e As EventArgs) Handles btn_dbk.Click
+        With Form_Data_Barang
+            .l_jud.Text = btn_dbk.Text
+            .ShowDialog()
+        End With
+    End Sub
 End Class

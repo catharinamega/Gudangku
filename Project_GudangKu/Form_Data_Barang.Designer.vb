@@ -22,12 +22,24 @@ Partial Class Form_Data_Barang
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.panel_menu = New System.Windows.Forms.Panel()
         Me.btn_min = New System.Windows.Forms.Button()
         Me.btn_max = New System.Windows.Forms.Button()
         Me.btn_close = New System.Windows.Forms.Button()
         Me.l_jud = New System.Windows.Forms.Label()
+        Me.tb_day = New System.Windows.Forms.TextBox()
+        Me.tb_mon = New System.Windows.Forms.TextBox()
+        Me.tb_year = New System.Windows.Forms.TextBox()
+        Me.panel_tanggal = New System.Windows.Forms.Panel()
+        Me.l1 = New System.Windows.Forms.Label()
+        Me.pb_1 = New System.Windows.Forms.PictureBox()
+        Me.waktu = New System.Windows.Forms.Timer(Me.components)
+        Me.l_tim = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.panel_menu.SuspendLayout()
+        Me.panel_tanggal.SuspendLayout()
+        CType(Me.pb_1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panel_menu
@@ -75,26 +87,127 @@ Partial Class Form_Data_Barang
         'l_jud
         '
         Me.l_jud.AutoSize = True
+        Me.l_jud.BackColor = System.Drawing.Color.Transparent
         Me.l_jud.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.l_jud.Location = New System.Drawing.Point(307, 45)
+        Me.l_jud.Location = New System.Drawing.Point(307, 87)
         Me.l_jud.Name = "l_jud"
         Me.l_jud.Size = New System.Drawing.Size(143, 33)
         Me.l_jud.TabIndex = 3
         Me.l_jud.Text = "<JUDUL>"
         '
+        'tb_day
+        '
+        Me.tb_day.BackColor = System.Drawing.Color.White
+        Me.tb_day.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_day.Location = New System.Drawing.Point(20, 32)
+        Me.tb_day.Name = "tb_day"
+        Me.tb_day.ReadOnly = True
+        Me.tb_day.Size = New System.Drawing.Size(84, 38)
+        Me.tb_day.TabIndex = 4
+        Me.tb_day.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'tb_mon
+        '
+        Me.tb_mon.BackColor = System.Drawing.Color.White
+        Me.tb_mon.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_mon.Location = New System.Drawing.Point(100, 32)
+        Me.tb_mon.Name = "tb_mon"
+        Me.tb_mon.ReadOnly = True
+        Me.tb_mon.Size = New System.Drawing.Size(216, 38)
+        Me.tb_mon.TabIndex = 5
+        Me.tb_mon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'tb_year
+        '
+        Me.tb_year.BackColor = System.Drawing.Color.White
+        Me.tb_year.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tb_year.Location = New System.Drawing.Point(315, 32)
+        Me.tb_year.Name = "tb_year"
+        Me.tb_year.ReadOnly = True
+        Me.tb_year.Size = New System.Drawing.Size(84, 38)
+        Me.tb_year.TabIndex = 6
+        Me.tb_year.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'panel_tanggal
+        '
+        Me.panel_tanggal.BackColor = System.Drawing.Color.Transparent
+        Me.panel_tanggal.Controls.Add(Me.l1)
+        Me.panel_tanggal.Controls.Add(Me.tb_mon)
+        Me.panel_tanggal.Controls.Add(Me.tb_year)
+        Me.panel_tanggal.Controls.Add(Me.tb_day)
+        Me.panel_tanggal.Location = New System.Drawing.Point(170, 140)
+        Me.panel_tanggal.Name = "panel_tanggal"
+        Me.panel_tanggal.Size = New System.Drawing.Size(409, 80)
+        Me.panel_tanggal.TabIndex = 7
+        '
+        'l1
+        '
+        Me.l1.AutoSize = True
+        Me.l1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.l1.Location = New System.Drawing.Point(16, 9)
+        Me.l1.Name = "l1"
+        Me.l1.Size = New System.Drawing.Size(66, 20)
+        Me.l1.TabIndex = 7
+        Me.l1.Text = "Tanggal"
+        '
+        'pb_1
+        '
+        Me.pb_1.Image = Global.Project_GudangKu.My.Resources.Resources.Grey_and_Neon_Green_House_Home_Furnishing_Logo__2_
+        Me.pb_1.Location = New System.Drawing.Point(602, 38)
+        Me.pb_1.Name = "pb_1"
+        Me.pb_1.Size = New System.Drawing.Size(45, 39)
+        Me.pb_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pb_1.TabIndex = 8
+        Me.pb_1.TabStop = False
+        '
+        'waktu
+        '
+        '
+        'l_tim
+        '
+        Me.l_tim.BackColor = System.Drawing.Color.Transparent
+        Me.l_tim.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.l_tim.ForeColor = System.Drawing.Color.White
+        Me.l_tim.Location = New System.Drawing.Point(653, 45)
+        Me.l_tim.Name = "l_tim"
+        Me.l_tim.Size = New System.Drawing.Size(135, 25)
+        Me.l_tim.TabIndex = 9
+        Me.l_tim.Text = "00 : 00 : 00"
+        '
+        'Button1
+        '
+        Me.Button1.BackgroundImage = Global.Project_GudangKu.My.Resources.Resources.PicsArt_04_24_02_02_39
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button1.Location = New System.Drawing.Point(0, 29)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 62)
+        Me.Button1.TabIndex = 11
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form_Data_Barang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.MediumPurple
+        Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.Project_GudangKu.My.Resources.Resources.Capture
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.l_tim)
+        Me.Controls.Add(Me.pb_1)
+        Me.Controls.Add(Me.panel_tanggal)
         Me.Controls.Add(Me.l_jud)
         Me.Controls.Add(Me.panel_menu)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form_Data_Barang"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form_Data_Barang"
         Me.panel_menu.ResumeLayout(False)
+        Me.panel_tanggal.ResumeLayout(False)
+        Me.panel_tanggal.PerformLayout()
+        CType(Me.pb_1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -105,4 +218,13 @@ Partial Class Form_Data_Barang
     Friend WithEvents btn_max As Button
     Friend WithEvents btn_close As Button
     Friend WithEvents l_jud As Label
+    Friend WithEvents tb_day As TextBox
+    Friend WithEvents tb_mon As TextBox
+    Friend WithEvents tb_year As TextBox
+    Friend WithEvents panel_tanggal As Panel
+    Friend WithEvents l1 As Label
+    Friend WithEvents pb_1 As PictureBox
+    Friend WithEvents waktu As Timer
+    Friend WithEvents l_tim As Label
+    Friend WithEvents Button1 As Button
 End Class
