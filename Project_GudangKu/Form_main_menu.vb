@@ -59,4 +59,9 @@
             .ShowDialog()
         End With
     End Sub
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        With Form_konversi
+            .ShowDialog()
+        End With
+    End Sub
 End Class
