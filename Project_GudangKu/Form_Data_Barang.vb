@@ -25,7 +25,7 @@
     End Sub
     Private Sub waktu_Tick(sender As Object, e As EventArgs) Handles waktu.Tick
         tb_day.Text = System.DateTime.Now.Day
-        tb_mon.Text = System.DateTime.Now.Month
+        tb_mon.Text = MonthName(System.DateTime.Now.Month)
         tb_year.Text = System.DateTime.Now.Year
         tim(2) = System.DateTime.Now.Second
         tim(1) = System.DateTime.Now.Minute
@@ -39,5 +39,14 @@
         Next
         l_tim.Text = tiim(0) & " : " & tiim(1) & " : " & tiim(2)
     End Sub
-
+    Private Sub btn_daftar_Click(sender As Object, e As EventArgs) Handles btn_daftar.Click
+        With Form_main_menu
+            .form_from = "DAFTARKAN BARANG BARU"
+            Form_barang_baru.ShowDialog()
+            .form_from = ""
+        End With
+    End Sub
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
 End Class

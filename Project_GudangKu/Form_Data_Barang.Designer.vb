@@ -145,7 +145,7 @@ Partial Class Form_Data_Barang
         Me.panel_tanggal.Controls.Add(Me.tb_mon)
         Me.panel_tanggal.Controls.Add(Me.tb_year)
         Me.panel_tanggal.Controls.Add(Me.tb_day)
-        Me.panel_tanggal.Location = New System.Drawing.Point(170, 107)
+        Me.panel_tanggal.Location = New System.Drawing.Point(174, 106)
         Me.panel_tanggal.Name = "panel_tanggal"
         Me.panel_tanggal.Size = New System.Drawing.Size(409, 80)
         Me.panel_tanggal.TabIndex = 7

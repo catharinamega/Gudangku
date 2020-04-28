@@ -3,6 +3,7 @@
     Dim mposition As Point
     Dim tim(2) As Integer 'waktu 0 jam, 1 menit, 2 detik
     Dim tiim(2) As String
+    Public form_from As String
     Private Sub Form_main_menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         pan_back.BackColor = Color.FromArgb(30, 0, 0, 0)
         panel_menu.BackColor = Color.FromArgb(50, 0, 0, 0)
@@ -54,14 +55,35 @@
         End With
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btn_seluruhbarang.Click
         With Form_semua_data
+            .l_jud.Text = "Daftar Barang"
             .ShowDialog()
         End With
     End Sub
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btn_kon_barang.Click
         With Form_konversi
             .ShowDialog()
         End With
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btn_stok_op.Click
+        With Form_semua_data
+            form_from = "STOK OPNAME"
+            .ShowDialog()
+            form_from = ""
+        End With
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btn_uhdata.Click
+        With Form_semua_data
+            form_from = "UBAH HAPUS DATA"
+            .ShowDialog()
+            form_from = ""
+        End With
+    End Sub
+
+    Private Sub pan_back_Paint(sender As Object, e As PaintEventArgs) Handles pan_back.Paint
+
     End Sub
 End Class

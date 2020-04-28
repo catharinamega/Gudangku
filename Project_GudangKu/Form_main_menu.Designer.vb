@@ -28,10 +28,10 @@ Partial Class Form_main_menu
         Me.btn_max = New System.Windows.Forms.Button()
         Me.btn_close = New System.Windows.Forms.Button()
         Me.pan_back = New System.Windows.Forms.Panel()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btn_uhdata = New System.Windows.Forms.Button()
+        Me.btn_kon_barang = New System.Windows.Forms.Button()
+        Me.btn_stok_op = New System.Windows.Forms.Button()
+        Me.btn_seluruhbarang = New System.Windows.Forms.Button()
         Me.btn_dbk = New System.Windows.Forms.Button()
         Me.bt_dbm = New System.Windows.Forms.Button()
         Me.l1 = New System.Windows.Forms.Label()
@@ -88,10 +88,10 @@ Partial Class Form_main_menu
         '
         'pan_back
         '
-        Me.pan_back.Controls.Add(Me.Button5)
-        Me.pan_back.Controls.Add(Me.Button4)
-        Me.pan_back.Controls.Add(Me.Button3)
-        Me.pan_back.Controls.Add(Me.Button2)
+        Me.pan_back.Controls.Add(Me.btn_uhdata)
+        Me.pan_back.Controls.Add(Me.btn_kon_barang)
+        Me.pan_back.Controls.Add(Me.btn_stok_op)
+        Me.pan_back.Controls.Add(Me.btn_seluruhbarang)
         Me.pan_back.Controls.Add(Me.btn_dbk)
         Me.pan_back.Controls.Add(Me.bt_dbm)
         Me.pan_back.Location = New System.Drawing.Point(62, 96)
@@ -99,57 +99,57 @@ Partial Class Form_main_menu
         Me.pan_back.Size = New System.Drawing.Size(684, 299)
         Me.pan_back.TabIndex = 2
         '
-        'Button5
+        'btn_uhdata
         '
-        Me.Button5.BackColor = System.Drawing.Color.White
-        Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(392, 215)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(261, 60)
-        Me.Button5.TabIndex = 5
-        Me.Button5.Text = "Ubah/Hapus Data"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.btn_uhdata.BackColor = System.Drawing.Color.White
+        Me.btn_uhdata.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btn_uhdata.FlatAppearance.BorderSize = 0
+        Me.btn_uhdata.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_uhdata.Location = New System.Drawing.Point(392, 215)
+        Me.btn_uhdata.Name = "btn_uhdata"
+        Me.btn_uhdata.Size = New System.Drawing.Size(261, 60)
+        Me.btn_uhdata.TabIndex = 5
+        Me.btn_uhdata.Text = "Ubah/Hapus Data"
+        Me.btn_uhdata.UseVisualStyleBackColor = False
         '
-        'Button4
+        'btn_kon_barang
         '
-        Me.Button4.BackColor = System.Drawing.Color.White
-        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(392, 121)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(261, 60)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "Konversi Jumlah"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.btn_kon_barang.BackColor = System.Drawing.Color.White
+        Me.btn_kon_barang.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btn_kon_barang.FlatAppearance.BorderSize = 0
+        Me.btn_kon_barang.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_kon_barang.Location = New System.Drawing.Point(392, 121)
+        Me.btn_kon_barang.Name = "btn_kon_barang"
+        Me.btn_kon_barang.Size = New System.Drawing.Size(261, 60)
+        Me.btn_kon_barang.TabIndex = 4
+        Me.btn_kon_barang.Text = "Konversi Jumlah"
+        Me.btn_kon_barang.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btn_stok_op
         '
-        Me.Button3.BackColor = System.Drawing.Color.White
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(50, 215)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(261, 60)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Stok Opname"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btn_stok_op.BackColor = System.Drawing.Color.White
+        Me.btn_stok_op.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btn_stok_op.FlatAppearance.BorderSize = 0
+        Me.btn_stok_op.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_stok_op.Location = New System.Drawing.Point(50, 215)
+        Me.btn_stok_op.Name = "btn_stok_op"
+        Me.btn_stok_op.Size = New System.Drawing.Size(261, 60)
+        Me.btn_stok_op.TabIndex = 3
+        Me.btn_stok_op.Text = "Stok Opname"
+        Me.btn_stok_op.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btn_seluruhbarang
         '
-        Me.Button2.BackColor = System.Drawing.Color.White
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(50, 121)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(261, 60)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Seluruh Barang"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btn_seluruhbarang.BackColor = System.Drawing.Color.White
+        Me.btn_seluruhbarang.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btn_seluruhbarang.FlatAppearance.BorderSize = 0
+        Me.btn_seluruhbarang.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_seluruhbarang.Location = New System.Drawing.Point(50, 121)
+        Me.btn_seluruhbarang.Name = "btn_seluruhbarang"
+        Me.btn_seluruhbarang.Size = New System.Drawing.Size(261, 60)
+        Me.btn_seluruhbarang.TabIndex = 2
+        Me.btn_seluruhbarang.Text = "Seluruh Barang"
+        Me.btn_seluruhbarang.UseVisualStyleBackColor = False
         '
         'btn_dbk
         '
@@ -260,10 +260,10 @@ Partial Class Form_main_menu
     Friend WithEvents pan_back As Panel
     Friend WithEvents bt_dbm As Button
     Friend WithEvents l1 As Label
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btn_uhdata As Button
+    Friend WithEvents btn_kon_barang As Button
+    Friend WithEvents btn_stok_op As Button
+    Friend WithEvents btn_seluruhbarang As Button
     Friend WithEvents btn_dbk As Button
     Friend WithEvents bt_keluar As Button
     Friend WithEvents waktu As Timer

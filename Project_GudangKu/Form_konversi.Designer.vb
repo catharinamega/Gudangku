@@ -36,8 +36,8 @@ Partial Class Form_konversi
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.btn_ok = New System.Windows.Forms.Button()
         Me.btn_daftar = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btn_home = New System.Windows.Forms.Button()
+        Me.btn_table = New System.Windows.Forms.Button()
         Me.panel_menu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -86,6 +86,7 @@ Partial Class Form_konversi
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(244, 81)
         Me.Label1.Name = "Label1"
@@ -122,8 +123,9 @@ Partial Class Form_konversi
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(349, 216)
+        Me.Label2.Location = New System.Drawing.Point(365, 218)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(36, 37)
         Me.Label2.TabIndex = 7
@@ -179,37 +181,39 @@ Partial Class Form_konversi
         Me.btn_daftar.Text = "BUAT DATA TURUNAN BARU"
         Me.btn_daftar.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btn_home
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button1.BackgroundImage = Global.Project_GudangKu.My.Resources.Resources.PicsArt_04_24_02_02_39
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(12, 36)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 75)
-        Me.Button1.TabIndex = 18
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btn_home.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_home.BackgroundImage = Global.Project_GudangKu.My.Resources.Resources.PicsArt_04_24_02_02_39
+        Me.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_home.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btn_home.Location = New System.Drawing.Point(12, 36)
+        Me.btn_home.Name = "btn_home"
+        Me.btn_home.Size = New System.Drawing.Size(75, 75)
+        Me.btn_home.TabIndex = 18
+        Me.btn_home.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btn_table
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(712, 36)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 75)
-        Me.Button2.TabIndex = 19
-        Me.Button2.Text = "Table"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btn_table.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btn_table.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_table.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btn_table.Location = New System.Drawing.Point(712, 36)
+        Me.btn_table.Name = "btn_table"
+        Me.btn_table.Size = New System.Drawing.Size(75, 75)
+        Me.btn_table.TabIndex = 19
+        Me.btn_table.Text = "Table"
+        Me.btn_table.UseVisualStyleBackColor = False
         '
         'Form_konversi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Project_GudangKu.My.Resources.Resources.Capture
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btn_table)
+        Me.Controls.Add(Me.btn_home)
         Me.Controls.Add(Me.btn_daftar)
         Me.Controls.Add(Me.btn_ok)
         Me.Controls.Add(Me.ComboBox3)
@@ -244,6 +248,6 @@ Partial Class Form_konversi
     Friend WithEvents ComboBox4 As ComboBox
     Friend WithEvents btn_ok As Button
     Friend WithEvents btn_daftar As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btn_home As Button
+    Friend WithEvents btn_table As Button
 End Class

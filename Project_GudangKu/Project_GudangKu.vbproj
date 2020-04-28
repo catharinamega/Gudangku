@@ -48,6 +48,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -86,10 +87,22 @@
     <Compile Include="Form_barang_baru.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_Daftar_Satuan.Designer.vb">
+      <DependentUpon>Form_Daftar_Satuan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Daftar_Satuan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Data_Barang.Designer.vb">
       <DependentUpon>Form_Data_Barang.vb</DependentUpon>
     </Compile>
     <Compile Include="Form_Data_Barang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Data_Turunan.Designer.vb">
+      <DependentUpon>Form_Data_Turunan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Data_Turunan.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_konversi.Designer.vb">
@@ -133,8 +146,14 @@
     <EmbeddedResource Include="Form_barang_baru.resx">
       <DependentUpon>Form_barang_baru.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Daftar_Satuan.resx">
+      <DependentUpon>Form_Daftar_Satuan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Data_Barang.resx">
       <DependentUpon>Form_Data_Barang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Data_Turunan.resx">
+      <DependentUpon>Form_Data_Turunan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_konversi.resx">
       <DependentUpon>Form_konversi.vb</DependentUpon>

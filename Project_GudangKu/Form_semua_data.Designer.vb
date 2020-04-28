@@ -86,16 +86,18 @@ Partial Class Form_semua_data
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(181, 129)
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(127, 121)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(266, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(348, 35)
         Me.TextBox1.TabIndex = 4
         '
         'btn_search
         '
-        Me.btn_search.Location = New System.Drawing.Point(501, 127)
+        Me.btn_search.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_search.Location = New System.Drawing.Point(509, 121)
         Me.btn_search.Name = "btn_search"
-        Me.btn_search.Size = New System.Drawing.Size(75, 23)
+        Me.btn_search.Size = New System.Drawing.Size(129, 35)
         Me.btn_search.TabIndex = 5
         Me.btn_search.Text = "Search"
         Me.btn_search.UseVisualStyleBackColor = True
@@ -115,6 +117,8 @@ Partial Class Form_semua_data
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Project_GudangKu.My.Resources.Resources.Capture
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.l_jud)
         Me.Controls.Add(Me.btn_search)

@@ -13,3 +13,14 @@ C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Proje
 C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.Form_main_menu.resources
 C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.Form_Data_Barang.resources
 C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.Form_barang_baru.resources
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\bin\Debug\MySql.Data.dll
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\bin\Debug\Google.Protobuf.dll
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\bin\Debug\Renci.SshNet.dll
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\bin\Debug\MySql.Data.xml
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.Form_Daftar_Satuan.resources
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.Form_Data_Turunan.resources
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.Form_konversi.resources
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.Form_semua_data.resources
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.vbproj.CopyComplete
