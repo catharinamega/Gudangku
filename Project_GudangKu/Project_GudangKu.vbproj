@@ -92,10 +92,22 @@
     <Compile Include="Form_Data_Barang.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_konversi.Designer.vb">
+      <DependentUpon>Form_konversi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_konversi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_main_menu.Designer.vb">
       <DependentUpon>Form_main_menu.vb</DependentUpon>
     </Compile>
     <Compile Include="Form_main_menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_semua_data.Designer.vb">
+      <DependentUpon>Form_semua_data.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_semua_data.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -124,8 +136,14 @@
     <EmbeddedResource Include="Form_Data_Barang.resx">
       <DependentUpon>Form_Data_Barang.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_konversi.resx">
+      <DependentUpon>Form_konversi.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_main_menu.resx">
       <DependentUpon>Form_main_menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_semua_data.resx">
+      <DependentUpon>Form_semua_data.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

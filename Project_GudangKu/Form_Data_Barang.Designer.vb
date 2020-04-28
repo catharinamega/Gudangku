@@ -99,7 +99,7 @@ Partial Class Form_Data_Barang
         Me.l_jud.AutoSize = True
         Me.l_jud.BackColor = System.Drawing.Color.Transparent
         Me.l_jud.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.l_jud.Location = New System.Drawing.Point(307, 87)
+        Me.l_jud.Location = New System.Drawing.Point(307, 70)
         Me.l_jud.Name = "l_jud"
         Me.l_jud.Size = New System.Drawing.Size(143, 33)
         Me.l_jud.TabIndex = 3
@@ -145,7 +145,7 @@ Partial Class Form_Data_Barang
         Me.panel_tanggal.Controls.Add(Me.tb_mon)
         Me.panel_tanggal.Controls.Add(Me.tb_year)
         Me.panel_tanggal.Controls.Add(Me.tb_day)
-        Me.panel_tanggal.Location = New System.Drawing.Point(170, 140)
+        Me.panel_tanggal.Location = New System.Drawing.Point(170, 107)
         Me.panel_tanggal.Name = "panel_tanggal"
         Me.panel_tanggal.Size = New System.Drawing.Size(409, 80)
         Me.panel_tanggal.TabIndex = 7
@@ -200,7 +200,7 @@ Partial Class Form_Data_Barang
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cb_nama_barang, Me.kode, Me.jumlah, Me.Satuan})
-        Me.DataGridView1.Location = New System.Drawing.Point(69, 321)
+        Me.DataGridView1.Location = New System.Drawing.Point(69, 277)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(645, 307)
         Me.DataGridView1.TabIndex = 12
@@ -235,7 +235,7 @@ Partial Class Form_Data_Barang
         Me.l2.AutoSize = True
         Me.l2.BackColor = System.Drawing.Color.Transparent
         Me.l2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.l2.Location = New System.Drawing.Point(64, 260)
+        Me.l2.Location = New System.Drawing.Point(64, 216)
         Me.l2.Name = "l2"
         Me.l2.Size = New System.Drawing.Size(80, 25)
         Me.l2.TabIndex = 13
@@ -245,7 +245,7 @@ Partial Class Form_Data_Barang
         '
         Me.tb_inv.Enabled = False
         Me.tb_inv.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tb_inv.Location = New System.Drawing.Point(174, 257)
+        Me.tb_inv.Location = New System.Drawing.Point(174, 213)
         Me.tb_inv.Name = "tb_inv"
         Me.tb_inv.Size = New System.Drawing.Size(193, 31)
         Me.tb_inv.TabIndex = 14
@@ -255,7 +255,7 @@ Partial Class Form_Data_Barang
         Me.btn_ok.BackColor = System.Drawing.Color.Black
         Me.btn_ok.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_ok.ForeColor = System.Drawing.Color.White
-        Me.btn_ok.Location = New System.Drawing.Point(230, 651)
+        Me.btn_ok.Location = New System.Drawing.Point(230, 600)
         Me.btn_ok.Name = "btn_ok"
         Me.btn_ok.Size = New System.Drawing.Size(316, 47)
         Me.btn_ok.TabIndex = 15
@@ -267,7 +267,7 @@ Partial Class Form_Data_Barang
         Me.btn_daftar.BackColor = System.Drawing.Color.Indigo
         Me.btn_daftar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_daftar.ForeColor = System.Drawing.Color.White
-        Me.btn_daftar.Location = New System.Drawing.Point(230, 704)
+        Me.btn_daftar.Location = New System.Drawing.Point(230, 653)
         Me.btn_daftar.Name = "btn_daftar"
         Me.btn_daftar.Size = New System.Drawing.Size(316, 64)
         Me.btn_daftar.TabIndex = 16
@@ -280,7 +280,7 @@ Partial Class Form_Data_Barang
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = Global.Project_GudangKu.My.Resources.Resources.Capture
-        Me.ClientSize = New System.Drawing.Size(800, 780)
+        Me.ClientSize = New System.Drawing.Size(800, 730)
         Me.Controls.Add(Me.btn_daftar)
         Me.Controls.Add(Me.btn_ok)
         Me.Controls.Add(Me.tb_inv)
