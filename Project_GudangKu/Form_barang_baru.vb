@@ -30,7 +30,7 @@
         End If
     End Sub
     Private Sub Waktu_Tick(sender As Object, e As EventArgs) Handles Waktu.Tick
-        tb_day.Text = System.DateTime.Now.Date
+        tb_day.Text = System.DateTime.Now.Day
         tb_mon.Text = MonthName(System.DateTime.Now.Month)
         tb_year.Text = System.DateTime.Now.Year
     End Sub

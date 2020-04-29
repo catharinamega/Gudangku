@@ -4,6 +4,7 @@
     Dim tim(2) As Integer 'waktu 0 jam, 1 menit, 2 detik
     Dim tiim(2) As String
     Public form_from As String
+    Public constring As String = "server=localhost;userid=root;password=;database=gudang"
     Private Sub Form_main_menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         pan_back.BackColor = Color.FromArgb(30, 0, 0, 0)
         panel_menu.BackColor = Color.FromArgb(50, 0, 0, 0)
@@ -69,6 +70,7 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btn_stok_op.Click
         With Form_semua_data
+            .l_jud.Text = "Daftar Barang"
             form_from = "STOK OPNAME"
             .ShowDialog()
             form_from = ""
@@ -77,6 +79,7 @@
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btn_uhdata.Click
         With Form_semua_data
+            .l_jud.Text = "Daftar Barang"
             form_from = "UBAH HAPUS DATA"
             .ShowDialog()
             form_from = ""
