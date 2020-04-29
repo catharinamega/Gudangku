@@ -29,12 +29,12 @@ Partial Class Form_Daftar_Satuan
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_back = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TB_singkatan = New System.Windows.Forms.TextBox()
+        Me.TB_satuan = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RB_bisagunakan = New System.Windows.Forms.RadioButton()
+        Me.RB_tidakdigunakan = New System.Windows.Forms.RadioButton()
         Me.btn_ok = New System.Windows.Forms.Button()
         Me.panel_menu.SuspendLayout()
         Me.SuspendLayout()
@@ -113,21 +113,21 @@ Partial Class Form_Daftar_Satuan
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Singkatan Satuan"
         '
-        'TextBox1
+        'TB_singkatan
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(310, 167)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(226, 35)
-        Me.TextBox1.TabIndex = 7
+        Me.TB_singkatan.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TB_singkatan.Location = New System.Drawing.Point(310, 167)
+        Me.TB_singkatan.Name = "TB_singkatan"
+        Me.TB_singkatan.Size = New System.Drawing.Size(226, 35)
+        Me.TB_singkatan.TabIndex = 7
         '
-        'TextBox2
+        'TB_satuan
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(310, 224)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(226, 35)
-        Me.TextBox2.TabIndex = 9
+        Me.TB_satuan.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TB_satuan.Location = New System.Drawing.Point(310, 224)
+        Me.TB_satuan.Name = "TB_satuan"
+        Me.TB_satuan.Size = New System.Drawing.Size(226, 35)
+        Me.TB_satuan.TabIndex = 9
         '
         'Label3
         '
@@ -151,31 +151,31 @@ Partial Class Form_Daftar_Satuan
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Status"
         '
-        'RadioButton1
+        'RB_bisagunakan
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.BackColor = System.Drawing.Color.Transparent
-        Me.RadioButton1.Checked = True
-        Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(98, 330)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(183, 30)
-        Me.RadioButton1.TabIndex = 11
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Bisa Digunakan"
-        Me.RadioButton1.UseVisualStyleBackColor = False
+        Me.RB_bisagunakan.AutoSize = True
+        Me.RB_bisagunakan.BackColor = System.Drawing.Color.Transparent
+        Me.RB_bisagunakan.Checked = True
+        Me.RB_bisagunakan.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RB_bisagunakan.Location = New System.Drawing.Point(98, 330)
+        Me.RB_bisagunakan.Name = "RB_bisagunakan"
+        Me.RB_bisagunakan.Size = New System.Drawing.Size(183, 30)
+        Me.RB_bisagunakan.TabIndex = 11
+        Me.RB_bisagunakan.TabStop = True
+        Me.RB_bisagunakan.Text = "Bisa Digunakan"
+        Me.RB_bisagunakan.UseVisualStyleBackColor = False
         '
-        'RadioButton2
+        'RB_tidakdigunakan
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.BackColor = System.Drawing.Color.Transparent
-        Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(310, 330)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(241, 30)
-        Me.RadioButton2.TabIndex = 12
-        Me.RadioButton2.Text = "Tidak Bisa Digunakan"
-        Me.RadioButton2.UseVisualStyleBackColor = False
+        Me.RB_tidakdigunakan.AutoSize = True
+        Me.RB_tidakdigunakan.BackColor = System.Drawing.Color.Transparent
+        Me.RB_tidakdigunakan.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RB_tidakdigunakan.Location = New System.Drawing.Point(310, 330)
+        Me.RB_tidakdigunakan.Name = "RB_tidakdigunakan"
+        Me.RB_tidakdigunakan.Size = New System.Drawing.Size(241, 30)
+        Me.RB_tidakdigunakan.TabIndex = 12
+        Me.RB_tidakdigunakan.Text = "Tidak Bisa Digunakan"
+        Me.RB_tidakdigunakan.UseVisualStyleBackColor = False
         '
         'btn_ok
         '
@@ -197,12 +197,12 @@ Partial Class Form_Daftar_Satuan
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(627, 464)
         Me.Controls.Add(Me.btn_ok)
-        Me.Controls.Add(Me.RadioButton2)
-        Me.Controls.Add(Me.RadioButton1)
+        Me.Controls.Add(Me.RB_tidakdigunakan)
+        Me.Controls.Add(Me.RB_bisagunakan)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TB_satuan)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TB_singkatan)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btn_back)
         Me.Controls.Add(Me.Label1)
@@ -223,11 +223,11 @@ Partial Class Form_Daftar_Satuan
     Friend WithEvents Label1 As Label
     Friend WithEvents btn_back As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TB_singkatan As TextBox
+    Friend WithEvents TB_satuan As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents RB_bisagunakan As RadioButton
+    Friend WithEvents RB_tidakdigunakan As RadioButton
     Friend WithEvents btn_ok As Button
 End Class

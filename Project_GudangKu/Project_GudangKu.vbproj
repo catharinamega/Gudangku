@@ -117,6 +117,12 @@
     <Compile Include="Form_main_menu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_message.Designer.vb">
+      <DependentUpon>Form_message.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_message.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_semua_data.Designer.vb">
       <DependentUpon>Form_semua_data.vb</DependentUpon>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_main_menu.resx">
       <DependentUpon>Form_main_menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_message.resx">
+      <DependentUpon>Form_message.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_semua_data.resx">
       <DependentUpon>Form_semua_data.vb</DependentUpon>

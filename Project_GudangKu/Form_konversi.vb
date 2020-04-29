@@ -22,6 +22,7 @@
     Private Sub btn_table_Click(sender As Object, e As EventArgs) Handles btn_table.Click
         With Form_semua_data
             .l_jud.Text = "Daftar Satuan"
+            Form_main_menu.form_from = "Daftar Satuan"
             .Show()
         End With
     End Sub

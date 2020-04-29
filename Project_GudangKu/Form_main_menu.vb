@@ -48,6 +48,7 @@
             .ShowDialog()
         End With
     End Sub
+
     Private Sub btn_dbk_Click(sender As Object, e As EventArgs) Handles btn_dbk.Click
         With Form_Data_Barang
             .btn_daftar.Visible = False
@@ -59,6 +60,7 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btn_seluruhbarang.Click
         With Form_semua_data
             .l_jud.Text = "Daftar Barang"
+            form_from = "SELURUH BARANG"
             .ShowDialog()
         End With
     End Sub
@@ -85,7 +87,6 @@
             form_from = ""
         End With
     End Sub
-
     Private Sub pan_back_Paint(sender As Object, e As PaintEventArgs) Handles pan_back.Paint
 
     End Sub

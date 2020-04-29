@@ -27,8 +27,7 @@ Partial Class Form_semua_data
         Me.btn_max = New System.Windows.Forms.Button()
         Me.btn_close = New System.Windows.Forms.Button()
         Me.dgv = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.btn_search = New System.Windows.Forms.Button()
+        Me.textbox_search = New System.Windows.Forms.TextBox()
         Me.l_jud = New System.Windows.Forms.Label()
         Me.btn_home = New System.Windows.Forms.Button()
         Me.panel_menu.SuspendLayout()
@@ -85,23 +84,13 @@ Partial Class Form_semua_data
         Me.dgv.Size = New System.Drawing.Size(718, 271)
         Me.dgv.TabIndex = 3
         '
-        'TextBox1
+        'textbox_search
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(127, 121)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(348, 35)
-        Me.TextBox1.TabIndex = 4
-        '
-        'btn_search
-        '
-        Me.btn_search.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_search.Location = New System.Drawing.Point(509, 121)
-        Me.btn_search.Name = "btn_search"
-        Me.btn_search.Size = New System.Drawing.Size(129, 35)
-        Me.btn_search.TabIndex = 5
-        Me.btn_search.Text = "Search"
-        Me.btn_search.UseVisualStyleBackColor = True
+        Me.textbox_search.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textbox_search.Location = New System.Drawing.Point(127, 121)
+        Me.textbox_search.Name = "textbox_search"
+        Me.textbox_search.Size = New System.Drawing.Size(476, 35)
+        Me.textbox_search.TabIndex = 4
         '
         'l_jud
         '
@@ -136,8 +125,7 @@ Partial Class Form_semua_data
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btn_home)
         Me.Controls.Add(Me.l_jud)
-        Me.Controls.Add(Me.btn_search)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.textbox_search)
         Me.Controls.Add(Me.dgv)
         Me.Controls.Add(Me.panel_menu)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -155,8 +143,7 @@ Partial Class Form_semua_data
     Friend WithEvents btn_max As Button
     Friend WithEvents btn_close As Button
     Friend WithEvents dgv As DataGridView
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents btn_search As Button
+    Friend WithEvents textbox_search As TextBox
     Friend WithEvents l_jud As Label
     Friend WithEvents btn_home As Button
 End Class

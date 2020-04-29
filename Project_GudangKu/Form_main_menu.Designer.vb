@@ -179,15 +179,15 @@ Partial Class Form_main_menu
         '
         'l1
         '
-        Me.l1.AutoSize = True
         Me.l1.BackColor = System.Drawing.Color.Transparent
         Me.l1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.l1.ForeColor = System.Drawing.Color.White
-        Me.l1.Location = New System.Drawing.Point(392, 56)
+        Me.l1.Location = New System.Drawing.Point(62, 56)
         Me.l1.Name = "l1"
-        Me.l1.Size = New System.Drawing.Size(354, 25)
+        Me.l1.Size = New System.Drawing.Size(684, 25)
         Me.l1.TabIndex = 3
         Me.l1.Text = "Selamat Datang, <ID Pengguna>"
+        Me.l1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'bt_keluar
         '
@@ -249,7 +249,6 @@ Partial Class Form_main_menu
         Me.pan_back.ResumeLayout(False)
         CType(Me.pb_1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
