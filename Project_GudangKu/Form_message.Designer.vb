@@ -23,9 +23,10 @@ Partial Class Form_message
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btn_tidak = New System.Windows.Forms.Button()
+        Me.btn_iya = New System.Windows.Forms.Button()
         Me.l_mess = New System.Windows.Forms.Label()
-        Me.btn_yes = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_ok = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -33,13 +34,38 @@ Partial Class Form_message
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.Control
         Me.Panel1.BackgroundImage = Global.Project_GudangKu.My.Resources.Resources.Capture
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.btn_yes)
+        Me.Panel1.Controls.Add(Me.btn_ok)
+        Me.Panel1.Controls.Add(Me.btn_tidak)
+        Me.Panel1.Controls.Add(Me.btn_iya)
         Me.Panel1.Controls.Add(Me.l_mess)
         Me.Panel1.Location = New System.Drawing.Point(2, 2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(379, 156)
         Me.Panel1.TabIndex = 0
+        '
+        'btn_tidak
+        '
+        Me.btn_tidak.BackColor = System.Drawing.Color.Red
+        Me.btn_tidak.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_tidak.ForeColor = System.Drawing.Color.White
+        Me.btn_tidak.Location = New System.Drawing.Point(241, 106)
+        Me.btn_tidak.Name = "btn_tidak"
+        Me.btn_tidak.Size = New System.Drawing.Size(75, 41)
+        Me.btn_tidak.TabIndex = 2
+        Me.btn_tidak.Text = "TIDAK"
+        Me.btn_tidak.UseVisualStyleBackColor = False
+        '
+        'btn_iya
+        '
+        Me.btn_iya.BackColor = System.Drawing.Color.Black
+        Me.btn_iya.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_iya.ForeColor = System.Drawing.Color.White
+        Me.btn_iya.Location = New System.Drawing.Point(59, 106)
+        Me.btn_iya.Name = "btn_iya"
+        Me.btn_iya.Size = New System.Drawing.Size(75, 41)
+        Me.btn_iya.TabIndex = 1
+        Me.btn_iya.Text = "IYA"
+        Me.btn_iya.UseVisualStyleBackColor = False
         '
         'l_mess
         '
@@ -52,29 +78,17 @@ Partial Class Form_message
         Me.l_mess.Text = "<Pesan>"
         Me.l_mess.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'btn_yes
+        'btn_ok
         '
-        Me.btn_yes.BackColor = System.Drawing.Color.Black
-        Me.btn_yes.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_yes.ForeColor = System.Drawing.Color.White
-        Me.btn_yes.Location = New System.Drawing.Point(59, 106)
-        Me.btn_yes.Name = "btn_yes"
-        Me.btn_yes.Size = New System.Drawing.Size(75, 41)
-        Me.btn_yes.TabIndex = 1
-        Me.btn_yes.Text = "IYA"
-        Me.btn_yes.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Red
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(241, 106)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 41)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "TIDAK"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btn_ok.BackColor = System.Drawing.Color.Black
+        Me.btn_ok.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_ok.ForeColor = System.Drawing.Color.White
+        Me.btn_ok.Location = New System.Drawing.Point(150, 106)
+        Me.btn_ok.Name = "btn_ok"
+        Me.btn_ok.Size = New System.Drawing.Size(75, 41)
+        Me.btn_ok.TabIndex = 3
+        Me.btn_ok.Text = "OKE"
+        Me.btn_ok.UseVisualStyleBackColor = False
         '
         'Form_message
         '
@@ -85,6 +99,7 @@ Partial Class Form_message
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form_message"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form_message"
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -92,7 +107,8 @@ Partial Class Form_message
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents btn_yes As Button
+    Friend WithEvents btn_tidak As Button
+    Friend WithEvents btn_iya As Button
     Friend WithEvents l_mess As Label
+    Friend WithEvents btn_ok As Button
 End Class

@@ -35,7 +35,12 @@ Public Class Form_Daftar_Satuan
 VALUES('" + TB_singkatan.Text.ToString + "', '" + TB_satuan.Text.ToString + "', '" + bisadipakai + "', 0)"
             sqlcommand = New MySqlCommand(sqlQuery, sqlconnect)
             sqlcommand.ExecuteNonQuery()
-            MsgBox("Data Satuan Baru Berhasil Dimasukkan")
+            With Form_message
+                .tombol = 1
+                .pesan = "Data Satuan Baru Berhasil Dimasukkan"
+                .ShowDialog()
+            End With
+            'MsgBox("Data Satuan Baru Berhasil Dimasukkan")
             sqlconnect.Close()
         Catch ex As Exception
             sqlconnect.Close()

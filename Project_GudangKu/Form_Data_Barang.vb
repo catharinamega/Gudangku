@@ -22,19 +22,16 @@ Public Class Form_Data_Barang
     Public bulan As String
     Public tanggal As String
     Public waktuoi As String
-
     Sub Form_Data_Barang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        dgv.Rows.Clear()
         waktu.Enabled = True
+        dgv.Rows.Clear()
         'DATA BARANG KELUAR
         If l_jud.Text = "Data Barang Keluar" Then
             Try
                 'INVOICE DATA BARANG KELUAR
                 autogenerateID = ""
                 dt_exit = New DataTable
-                query = "SELECT exit_id 
-FROM item_exit
- ;"
+                query = "SELECT exit_id FROM item_exit;"
                 commmand = New MySqlCommand(query, connection)
                 dataadap = New MySqlDataAdapter(commmand)
                 dataadap.Fill(dt_exit)
@@ -77,7 +74,7 @@ FROM item;"
             Try
                 'INVOICE DATA BARANG MASUK
                 autogenerateID = ""
-                dt_exit = New DataTable
+                dt_invoice = New DataTable
                 query = "SELECT incoming_id 
 FROM item_incoming
  ;"
@@ -87,15 +84,15 @@ FROM item_incoming
 
 
                 If dt_invoice.Rows.Count >= 9999 Then
-                    autogenerateID = autogenerateID + (dt_exit.Rows.Count + 1).ToString
+                    autogenerateID = autogenerateID + (dt_invoice.Rows.Count + 1).ToString
                 ElseIf dt_invoice.Rows.Count >= 999 Then
-                    autogenerateID = autogenerateID + "0" + (dt_exit.Rows.Count + 1).ToString
+                    autogenerateID = autogenerateID + "0" + (dt_invoice.Rows.Count + 1).ToString
                 ElseIf dt_invoice.Rows.Count >= 99 Then
-                    autogenerateID = autogenerateID + "00" + (dt_exit.Rows.Count + 1).ToString
+                    autogenerateID = autogenerateID + "00" + (dt_invoice.Rows.Count + 1).ToString
                 ElseIf dt_invoice.Rows.Count >= 9 Then
-                    autogenerateID = autogenerateID + "000" + (dt_exit.Rows.Count + 1).ToString
+                    autogenerateID = autogenerateID + "000" + (dt_invoice.Rows.Count + 1).ToString
                 ElseIf dt_exit.Rows.Count >= 0 Then
-                    autogenerateID = autogenerateID + "0000" + (dt_exit.Rows.Count + 1).ToString
+                    autogenerateID = autogenerateID + "0000" + (dt_invoice.Rows.Count + 1).ToString
                 End If
                 tb_inv.Text = "IN" + autogenerateID
 
@@ -117,6 +114,7 @@ FROM item;"
     End Sub
     Private Sub cb_nama_barang_SelectedIndexChanged(sender As Object, e As DataGridViewCellEventArgs) Handles dgv.CellValueChanged
         Dim dt_satuan As New DataTable
+
         Try
             'DATA BARANG KELUAR
             If l_jud.Text = "Data Barang Keluar" Then
@@ -176,9 +174,21 @@ WHERE item_id = '" + dgv.Rows(e.RowIndex).Cells(0).Value.ToString + "' ;"
         Me.Close()
     End Sub
     Private Sub waktu_Tick(sender As Object, e As EventArgs) Handles waktu.Tick
-        tb_day.Text = System.DateTime.Now.Day
+        If System.DateTime.Now.Day < 10 Then
+            day = "0" & System.DateTime.Now.Day.ToString
+        ElseIf System.DateTime.Now.Day >= 10 Then
+            day = System.DateTime.Now.Day
+        End If
+        tb_day.Text = day
         tb_mon.Text = MonthName(System.DateTime.Now.Month)
+        If System.DateTime.Now.Month < 10 Then
+            bulan = "0" & System.DateTime.Now.Month.ToString
+        ElseIf System.DateTime.Now.Month >= 10 Then
+            bulan = System.DateTime.Now.Month
+        End If
         tb_year.Text = System.DateTime.Now.Year
+        tanggal = (tb_year.Text & "-" & bulan & "-" & tb_day.Text).ToString
+
         tim(2) = System.DateTime.Now.Second
         tim(1) = System.DateTime.Now.Minute
         tim(0) = System.DateTime.Now.Hour
@@ -190,6 +200,7 @@ WHERE item_id = '" + dgv.Rows(e.RowIndex).Cells(0).Value.ToString + "' ;"
             End If
         Next
         l_tim.Text = tiim(0) & " : " & tiim(1) & " : " & tiim(2)
+        waktuoi = tiim(0) & ":" & tiim(1)
     End Sub
     Private Sub btn_daftar_Click(sender As Object, e As EventArgs) Handles btn_daftar.Click
         With Form_main_menu
@@ -200,6 +211,7 @@ WHERE item_id = '" + dgv.Rows(e.RowIndex).Cells(0).Value.ToString + "' ;"
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
+        'Form_main_menu(sender, e)
     End Sub
 
     Sub btn_ok_Click(sender As Object, e As EventArgs) Handles btn_ok.Click
@@ -227,7 +239,12 @@ VALUES('" + tb_inv.Text.ToString + "','" + dgv.Rows(i).Cells(1).Value.ToString +
                 'MsgBox("DATA BERHASIL DIINPUT")
                 connection.Close()
             Next
-            MsgBox("DATA BERHASIL DIINPUT")
+            With Form_message
+                .tombol = 1
+                .pesan = "DATA BERHASIL DIINPUT"
+                .ShowDialog()
+            End With
+            ' MsgBox("DATA BERHASIL DIINPUT")
         ElseIf l_jud.Text = "Data Barang Keluar" Then
             'insert di item_exit
             connection.Open()
@@ -251,7 +268,15 @@ VALUES('" + tb_inv.Text.ToString + "','" + dgv.Rows(i).Cells(1).Value.ToString +
                 'MsgBox("DATA BERHASIL DIINPUT")
                 connection.Close()
             Next
-            MessageBox.Show("DATA BERHASIL DIMASUKKAN. PRINT NOTA?", "REQUEST", MessageBoxButtons.YesNo)
+            With Form_message
+                .tombol = 2
+                .pesan = "DATA BERHASIL DIMASUKKAN. PRINT NOTA?"
+                .ShowDialog()
+                If .hasil = True Then
+                    MsgBox("Data Akan diprint")
+                End If
+            End With
+            'MessageBox.Show("DATA BERHASIL DIMASUKKAN. PRINT NOTA?", "REQUEST", MessageBoxButtons.YesNo)
         End If
 
     End Sub

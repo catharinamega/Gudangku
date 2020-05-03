@@ -39,6 +39,7 @@ Partial Class Form_main_menu
         Me.waktu = New System.Windows.Forms.Timer(Me.components)
         Me.l_tim = New System.Windows.Forms.Label()
         Me.pb_1 = New System.Windows.Forms.PictureBox()
+        Me.btn_mess_test = New System.Windows.Forms.Button()
         Me.panel_menu.SuspendLayout()
         Me.pan_back.SuspendLayout()
         CType(Me.pb_1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -227,6 +228,20 @@ Partial Class Form_main_menu
         Me.pb_1.TabIndex = 6
         Me.pb_1.TabStop = False
         '
+        'btn_mess_test
+        '
+        Me.btn_mess_test.BackColor = System.Drawing.Color.MediumPurple
+        Me.btn_mess_test.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btn_mess_test.FlatAppearance.BorderSize = 0
+        Me.btn_mess_test.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_mess_test.ForeColor = System.Drawing.Color.White
+        Me.btn_mess_test.Location = New System.Drawing.Point(315, 401)
+        Me.btn_mess_test.Name = "btn_mess_test"
+        Me.btn_mess_test.Size = New System.Drawing.Size(161, 39)
+        Me.btn_mess_test.TabIndex = 7
+        Me.btn_mess_test.Text = "Keluar Akun"
+        Me.btn_mess_test.UseVisualStyleBackColor = False
+        '
         'Form_main_menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -234,6 +249,7 @@ Partial Class Form_main_menu
         Me.BackgroundImage = Global.Project_GudangKu.My.Resources.Resources.Blue_Extra_Fries_Funny_Wallpaper__2_
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 465)
+        Me.Controls.Add(Me.btn_mess_test)
         Me.Controls.Add(Me.pb_1)
         Me.Controls.Add(Me.l_tim)
         Me.Controls.Add(Me.bt_keluar)
@@ -268,4 +284,5 @@ Partial Class Form_main_menu
     Friend WithEvents waktu As Timer
     Friend WithEvents l_tim As Label
     Friend WithEvents pb_1 As PictureBox
+    Friend WithEvents btn_mess_test As Button
 End Class

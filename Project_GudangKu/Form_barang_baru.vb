@@ -27,7 +27,12 @@ Public Class Form_barang_baru
                 connection.Open()
                 commmand = New MySqlCommand(query, connection)
                 commmand.ExecuteNonQuery()
-                MsgBox("SUKSES")
+                With Form_message
+                    .tombol = 1
+                    .pesan = "SUKSES"
+                    .ShowDialog()
+                End With
+                'MsgBox("SUKSES")
                 Form_semua_data.tampilkan_data_barang()
                 connection.Close()
             Catch ex As Exception
@@ -42,14 +47,29 @@ Public Class Form_barang_baru
                     '""','" + cb_satuan.SelectedValue.ToString + "',0,0)"
                 commmand = New MySqlCommand(query, connection)
                 If tb_kode.Text = "" Or cb_satuan.SelectedItem.ToString = "" Or tb_nama.Text = "" Then
-                    MsgBox("Data tidak lengkap!")
+                    'MsgBox("Data tidak lengkap!")
+                    With Form_message
+                        .tombol = 1
+                        .pesan = "Data tidak lengkap!"
+                        .ShowDialog()
+                    End With
                 ElseIf tb_kode.Text <> "" Or cb_satuan.SelectedItem.ToString <> "" Or tb_nama.Text <> "" Then
                     Dim result As DialogResult = MsgBox("Are You Sure?'", MsgBoxStyle.YesNo)
                     If result = DialogResult.Yes Then
-                        MsgBox("Inserting data success!", MsgBoxStyle.OkOnly)
+                        ' MsgBox("Inserting data success!", MsgBoxStyle.OkOnly)
                         commmand.ExecuteNonQuery()
+                        With Form_message
+                            .tombol = 1
+                            .pesan = "Inserting data success!"
+                            .ShowDialog()
+                        End With
                     ElseIf result = DialogResult.No Then
-                        MsgBox("Inserting data canceled!", MsgBoxStyle.OkOnly)
+                        ' MsgBox("Inserting data canceled!", MsgBoxStyle.OkOnly)
+                        With Form_message
+                            .tombol = 1
+                            .pesan = "Inserting data canceled!"
+                            .ShowDialog()
+                        End With
                     End If
                 End If
                 connection.Close()
@@ -148,7 +168,12 @@ Public Class Form_barang_baru
                 commmand = New MySqlCommand(query, connection)
                 MsgBox(query)
                 commmand.ExecuteNonQuery()
-                MsgBox("Item berhasil dihapus")
+                'MsgBox("Item berhasil dihapus")
+                With Form_message
+                    .tombol = 1
+                    .pesan = "Item berhasil dihapus"
+                    .ShowDialog()
+                End With
                 connection.Close()
             End If
         Catch ex As Exception

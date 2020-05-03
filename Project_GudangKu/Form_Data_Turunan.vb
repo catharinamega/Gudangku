@@ -74,7 +74,12 @@ Public Class Form_Data_Turunan
             '" + TB_jumlahKecil.Text.ToString + "','" + CB_itemKecil.SelectedValue.ToString + "', 0)"
             commmand = New MySqlCommand(query, connection)
             commmand.ExecuteNonQuery()
-            MsgBox("Data Turunan Berhasil Dimasukkan")
+            With Form_message
+                .tombol = 1
+                .pesan = "Data Turunan Berhasil Dimasukkan"
+                .ShowDialog()
+            End With
+            'MsgBox("Data Turunan Berhasil Dimasukkan")
             connection.Close()
         Catch ex As Exception
             connection.Close()

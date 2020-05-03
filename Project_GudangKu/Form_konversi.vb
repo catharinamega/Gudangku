@@ -51,7 +51,12 @@ Public Class Form_konversi
             query = "UPDATE item SET amount = (amount+" + TB_kecil.Text.ToString + ") WHERE item_id = '" + CoBox_Kecil.SelectedValue.ToString + "'"
             command = New MySqlCommand(query, connection)
             command.ExecuteNonQuery()
-            MsgBox("Data Turunan Berhasil Dikonversi")
+            With Form_message
+                .tombol = 1
+                .pesan = "Data Turunan Berhasil Dikonversi"
+                .ShowDialog()
+            End With
+            'MsgBox("Data Turunan Berhasil Dikonversi")
             connection.Close()
         Catch ex As Exception
             connection.Close()

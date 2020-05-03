@@ -90,4 +90,16 @@
     Private Sub pan_back_Paint(sender As Object, e As PaintEventArgs) Handles pan_back.Paint
 
     End Sub
+
+    Private Sub btn_mess_test_Click(sender As Object, e As EventArgs) Handles btn_mess_test.Click
+        With Form_message
+            .tombol = 2
+            .ShowDialog()
+            If .hasil = True Then
+                MsgBox("Iya")
+            ElseIf .hasil = False Then
+                MsgBox("Tidak")
+            End If
+        End With
+    End Sub
 End Class
