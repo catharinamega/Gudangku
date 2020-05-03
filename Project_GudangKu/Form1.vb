@@ -8,6 +8,7 @@ Public Class form_login
     Dim query As String
     Dim dt_user As DataTable
     Dim Valid As Boolean
+    Public staff_id As String
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_close.Click
         Me.Close()
     End Sub
@@ -42,6 +43,7 @@ Public Class form_login
         If dt_user.Rows.Count > 0 Then
             If tb_pass.Text = dt_user.Rows(0).Item(2).ToString Then
                 Form_main_menu.l1.Text = "Selamat Datang, " & dt_user.Rows(0).Item(1).ToString
+                staff_id = dt_user.Rows(0).Item(0).ToString
                 Form_main_menu.Show()
             Else
                 MsgBox("Data Tidak valid!", MsgBoxStyle.OkOnly)

@@ -10,13 +10,13 @@ Public Class Form_semua_data
     Dim dt_data As New DataTable
     Dim dt_seluruhbarang As New DataTable
     Public pilihan_satuan As String
+    Dim hapusini As String
     Private Sub btn_close_Click(sender As Object, e As EventArgs) Handles btn_close.Click
         Me.Close()
     End Sub
     Private Sub panel_menu_MouseDown(sender As Object, e As MouseEventArgs) Handles panel_menu.MouseDown
         movee = New Point(-e.X, -e.Y)
     End Sub
-
     Private Sub panel_menu_MouseMove(sender As Object, e As MouseEventArgs) Handles panel_menu.MouseMove
         If e.Button = MouseButtons.Left Then
             mposition = New Point
@@ -30,7 +30,10 @@ Public Class Form_semua_data
     End Sub
     Sub tampilkan_data_barang()
         Try
-            query = "Select item_id `ID Barang`, item_name `Nama Barang`, amount `Jumlah`, amount_type `Satuan`, if(item_status = 0,'Tersedia','Tidak Tersedia') `Status Barang` from item;"
+            dt_data = New DataTable
+            query = "select  i.item_id `ID Barang`, i.item_name `Nama Barang`, i.amount  + sum(if(i.item_id = di.item_id,di.amount,0)) - sum(if(de.item_id = i.item_id,de.amount ,0)) `Jumlah`,amount_type `Satuan`, if(item_status = 0,'Tersedia','Tidak Tersedia') `Status Barang`
+From item i left Join dincoming di on i.item_id = di.item_id left Join dexit de on de.item_id = i.item_id
+Group By i.item_id"
             commmand = New MySqlCommand(query, connection)
             dataadap = New MySqlDataAdapter(commmand)
             dataadap.Fill(dt_data)
@@ -45,44 +48,30 @@ Public Class Form_semua_data
                 With Form_barang_baru
                     Form_barang_baru.tb_kode.Text = dgv.Rows(e.RowIndex).Cells(0).Value.ToString
                     Form_barang_baru.tb_nama.Text = dgv.Rows(e.RowIndex).Cells(1).Value.ToString
-
                     pilihan_satuan = dgv.Rows(e.RowIndex).Cells(3).Value.ToString
+                    pilihan_satuan = dgv.Rows(e.RowIndex).Cells(3).Value.ToString
+                    hapusini = " (" + pilihan_satuan + ")"
+                    Form_barang_baru.tb_kode.Text = dgv.Rows(e.RowIndex).Cells(0).Value.ToString
+                    Form_barang_baru.tb_nama.Text = dgv.Rows(e.RowIndex).Cells(1).Value.ToString.Replace(hapusini, "")
                 End With
                 Form_barang_baru.ShowDialog()
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
+        ElseIf Form_main_menu.form_from = "Stok Opname" Then
+            With Form_Opname
+                .ShowDialog()
+            End With
         End If
     End Sub
-    'Private Sub Form_semua_data_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-    '    'If Form_main_menu.form_from = "UBAH HAPUS DATA" Then
-    '    Call tampilkan_data_barang()
-    '    'End If
-    'End Sub
-    'Private Sub textbox_search_TextChanged(sender As Object, e As EventArgs) Handles textbox_search.TextChanged
-    '    If textbox_search.Text.Length > 0 Then
-    '        Try
-    '            dt_seluruhbarang = New DataTable
-    '            query = "SELECT item_id `Kode`, item_name `Nama`, amount `Jumlah`, amount_type `Satuan`, if(item_status = 0,'Tersedia','Tidak Tersedia') `Status` FROM item WHERE item_name LIKE '%" + textbox_search.Text.ToString + "%' ;"
-    '            commmand = New MySqlCommand(query, connection)
-    '            dataadap = New MySqlDataAdapter(commmand)
-    '            dataadap.Fill(dt_seluruhbarang)
-    '            dgv.DataSource = dt_seluruhbarang
-    '        Catch ex As Exception
-    '            MsgBox(ex.Message)
-    '        End Try
-    '    Else
-    '        textbox_search.Text = ""
-    '    End If
-    'End Sub
     Private Sub textbox_search_TextChanged(sender As Object, e As EventArgs) Handles textbox_search.TextChanged
         If textbox_search.Text.Length <> 0 Then
-            If Form_main_menu.form_from = "UBAH HAPUS DATA" Or Form_main_menu.form_from = "SELURUH BARANG" Then
+            If Form_main_menu.form_from = "UBAH HAPUS DATA" Or Form_main_menu.form_from = "SELURUH BARANG" Or Form_main_menu.form_from = "Stok Opname" Then
                 Try
                     dt_seluruhbarang = New DataTable
-                    query = "SELECT item_id `ID Barang`, item_name `Nama Barang`, amount `Jumlah`, amount_type `Satuan`, item_status Status Barang
-FROM item
-WHERE item_name LIKE '%" + textbox_search.Text.ToString + "%'"
+                    query = "SELECT i.item_id `ID Barang`, i.item_name `Nama Barang`, i.amount  + sum(if(i.item_id = di.item_id,di.amount,0)) - sum(if(de.item_id = i.item_id,de.amount ,0)) `Jumlah`, amount_type `Satuan`, if(item_status = 0,'Tersedia','Tidak Tersedia') `Status Barang`
+FROM item i left join dincoming di on i.item_id = di.item_id left join dexit de on de.item_id = i.item_id
+WHERE i.item_name LIKE '%" + textbox_search.Text.ToString + "%' Group by i.item_id"
                     commmand = New MySqlCommand(query, connection)
                     dataadap = New MySqlDataAdapter(commmand)
                     dataadap.Fill(dt_seluruhbarang)
@@ -115,6 +104,8 @@ WHERE c1.item_id1 = i1.item_id AND c2.item_id1 = i2.item_id AND c1.item_id1 = c2
         ElseIf Form_main_menu.form_from = "Daftar Satuan" Then
             Call daftar_satuan()
         ElseIf Form_main_menu.form_from = "SELURUH BARANG" Then
+            Call tampilkan_data_barang()
+        ElseIf Form_main_menu.form_from = "Stok Opname" Then
             Call tampilkan_data_barang()
         End If
     End Sub

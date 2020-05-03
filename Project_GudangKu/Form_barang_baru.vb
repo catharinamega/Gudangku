@@ -38,7 +38,7 @@ Public Class Form_barang_baru
             Try
                 dt_insert = New DataTable
                 connection.Open()
-                query = "INSERT INTO item VALUES('" + tb_kode.Text + "', '" + tb_nama.Text + "',
+                query = "INSERT INTO item VALUES('" + tb_kode.Text + "', '" + tb_nama.Text + " (" + (cb_satuan.SelectedValue.ToString) + ") " + " ',
                     '""','" + cb_satuan.SelectedValue.ToString + "',0,0)"
                 commmand = New MySqlCommand(query, connection)
                 If tb_kode.Text = "" Or cb_satuan.SelectedItem.ToString = "" Or tb_nama.Text = "" Then
@@ -59,7 +59,7 @@ Public Class Form_barang_baru
             End Try
         End If
     End Sub
-    Sub tb_nama_TextChanged(sender As Object, e As EventArgs) Handles tb_nama.TextChanged
+    Sub tb_nama_TextChanged(sender As Object, e As EventArgs) Handles tb_nama.Leave
         Try
             If Form_main_menu.form_from = "DAFTARKAN BARANG BARU" Then
                 autogenerate = ""
@@ -114,7 +114,9 @@ Public Class Form_barang_baru
         cb_satuan.DataSource = dt_satuan
         cb_satuan.ValueMember = "amount_type"
         cb_satuan.DisplayMember = "type_name"
-        cb_satuan.SelectedValue = Form_semua_data.pilihan_satuan
+        If Form_main_menu.form_from = "UBAH HAPUS DATA" Then
+            cb_satuan.SelectedValue = Form_semua_data.pilihan_satuan
+        End If
     End Sub
     Private Sub panel_menu_MouseDown(sender As Object, e As MouseEventArgs) Handles panel_menu.MouseDown
         movee = New Point(-e.X, -e.Y)

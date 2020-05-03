@@ -37,7 +37,7 @@ Partial Class Form_Data_Barang
         Me.waktu = New System.Windows.Forms.Timer(Me.components)
         Me.l_tim = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgv = New System.Windows.Forms.DataGridView()
         Me.cb_nama_barang = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.kode = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.jumlah = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -49,7 +49,7 @@ Partial Class Form_Data_Barang
         Me.panel_menu.SuspendLayout()
         Me.panel_tanggal.SuspendLayout()
         CType(Me.pb_1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'panel_menu
@@ -196,14 +196,14 @@ Partial Class Form_Data_Barang
         Me.Button1.TabIndex = 11
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dgv
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cb_nama_barang, Me.kode, Me.jumlah, Me.Satuan})
-        Me.DataGridView1.Location = New System.Drawing.Point(69, 277)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(645, 307)
-        Me.DataGridView1.TabIndex = 12
+        Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cb_nama_barang, Me.kode, Me.jumlah, Me.Satuan})
+        Me.dgv.Location = New System.Drawing.Point(69, 277)
+        Me.dgv.Name = "dgv"
+        Me.dgv.Size = New System.Drawing.Size(645, 307)
+        Me.dgv.TabIndex = 12
         '
         'cb_nama_barang
         '
@@ -285,7 +285,7 @@ Partial Class Form_Data_Barang
         Me.Controls.Add(Me.btn_ok)
         Me.Controls.Add(Me.tb_inv)
         Me.Controls.Add(Me.l2)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgv)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.l_tim)
         Me.Controls.Add(Me.pb_1)
@@ -301,7 +301,7 @@ Partial Class Form_Data_Barang
         Me.panel_tanggal.ResumeLayout(False)
         Me.panel_tanggal.PerformLayout()
         CType(Me.pb_1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -321,7 +321,7 @@ Partial Class Form_Data_Barang
     Friend WithEvents waktu As Timer
     Friend WithEvents l_tim As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgv As DataGridView
     Friend WithEvents cb_nama_barang As DataGridViewComboBoxColumn
     Friend WithEvents kode As DataGridViewTextBoxColumn
     Friend WithEvents jumlah As DataGridViewTextBoxColumn

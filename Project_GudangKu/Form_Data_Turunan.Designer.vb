@@ -27,13 +27,13 @@ Partial Class Form_Data_Turunan
         Me.btn_max = New System.Windows.Forms.Button()
         Me.btn_close = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.CB_satuanKecil = New System.Windows.Forms.ComboBox()
+        Me.TB_jumlahKecil = New System.Windows.Forms.TextBox()
+        Me.CB_itemKecil = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Cb_satuanBesar = New System.Windows.Forms.ComboBox()
+        Me.TB_Jumlahbesar = New System.Windows.Forms.TextBox()
+        Me.CB_itemBesar = New System.Windows.Forms.ComboBox()
         Me.btn_back = New System.Windows.Forms.Button()
         Me.btn_ok = New System.Windows.Forms.Button()
         Me.btn_dafbar = New System.Windows.Forms.Button()
@@ -93,31 +93,31 @@ Partial Class Form_Data_Turunan
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Data Turunan Barang"
         '
-        'ComboBox3
+        'CB_satuanKecil
         '
-        Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(595, 220)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 37)
-        Me.ComboBox3.TabIndex = 17
+        Me.CB_satuanKecil.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CB_satuanKecil.FormattingEnabled = True
+        Me.CB_satuanKecil.Location = New System.Drawing.Point(595, 220)
+        Me.CB_satuanKecil.Name = "CB_satuanKecil"
+        Me.CB_satuanKecil.Size = New System.Drawing.Size(121, 37)
+        Me.CB_satuanKecil.TabIndex = 17
         '
-        'TextBox2
+        'TB_jumlahKecil
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(463, 220)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 35)
-        Me.TextBox2.TabIndex = 16
+        Me.TB_jumlahKecil.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TB_jumlahKecil.Location = New System.Drawing.Point(463, 220)
+        Me.TB_jumlahKecil.Name = "TB_jumlahKecil"
+        Me.TB_jumlahKecil.Size = New System.Drawing.Size(100, 35)
+        Me.TB_jumlahKecil.TabIndex = 16
         '
-        'ComboBox4
+        'CB_itemKecil
         '
-        Me.ComboBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(463, 154)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(253, 37)
-        Me.ComboBox4.TabIndex = 15
+        Me.CB_itemKecil.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CB_itemKecil.FormattingEnabled = True
+        Me.CB_itemKecil.Location = New System.Drawing.Point(463, 154)
+        Me.CB_itemKecil.Name = "CB_itemKecil"
+        Me.CB_itemKecil.Size = New System.Drawing.Size(253, 37)
+        Me.CB_itemKecil.TabIndex = 15
         '
         'Label2
         '
@@ -130,31 +130,31 @@ Partial Class Form_Data_Turunan
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "="
         '
-        'ComboBox2
+        'Cb_satuanBesar
         '
-        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(166, 218)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 37)
-        Me.ComboBox2.TabIndex = 13
+        Me.Cb_satuanBesar.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cb_satuanBesar.FormattingEnabled = True
+        Me.Cb_satuanBesar.Location = New System.Drawing.Point(166, 218)
+        Me.Cb_satuanBesar.Name = "Cb_satuanBesar"
+        Me.Cb_satuanBesar.Size = New System.Drawing.Size(121, 37)
+        Me.Cb_satuanBesar.TabIndex = 13
         '
-        'TextBox1
+        'TB_Jumlahbesar
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(34, 220)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 35)
-        Me.TextBox1.TabIndex = 12
+        Me.TB_Jumlahbesar.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TB_Jumlahbesar.Location = New System.Drawing.Point(34, 220)
+        Me.TB_Jumlahbesar.Name = "TB_Jumlahbesar"
+        Me.TB_Jumlahbesar.Size = New System.Drawing.Size(100, 35)
+        Me.TB_Jumlahbesar.TabIndex = 12
         '
-        'ComboBox1
+        'CB_itemBesar
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(34, 152)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(253, 37)
-        Me.ComboBox1.TabIndex = 11
+        Me.CB_itemBesar.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CB_itemBesar.FormattingEnabled = True
+        Me.CB_itemBesar.Location = New System.Drawing.Point(34, 152)
+        Me.CB_itemBesar.Name = "CB_itemBesar"
+        Me.CB_itemBesar.Size = New System.Drawing.Size(253, 37)
+        Me.CB_itemBesar.TabIndex = 11
         '
         'btn_back
         '
@@ -199,13 +199,13 @@ Partial Class Form_Data_Turunan
         Me.Controls.Add(Me.btn_dafbar)
         Me.Controls.Add(Me.btn_ok)
         Me.Controls.Add(Me.btn_back)
-        Me.Controls.Add(Me.ComboBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.ComboBox4)
+        Me.Controls.Add(Me.CB_satuanKecil)
+        Me.Controls.Add(Me.TB_jumlahKecil)
+        Me.Controls.Add(Me.CB_itemKecil)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Cb_satuanBesar)
+        Me.Controls.Add(Me.TB_Jumlahbesar)
+        Me.Controls.Add(Me.CB_itemBesar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.panel_menu)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -222,13 +222,13 @@ Partial Class Form_Data_Turunan
     Friend WithEvents btn_max As Button
     Friend WithEvents btn_close As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents CB_satuanKecil As ComboBox
+    Friend WithEvents TB_jumlahKecil As TextBox
+    Friend WithEvents CB_itemKecil As ComboBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Cb_satuanBesar As ComboBox
+    Friend WithEvents TB_Jumlahbesar As TextBox
+    Friend WithEvents CB_itemBesar As ComboBox
     Friend WithEvents btn_back As Button
     Friend WithEvents btn_ok As Button
     Friend WithEvents btn_dafbar As Button

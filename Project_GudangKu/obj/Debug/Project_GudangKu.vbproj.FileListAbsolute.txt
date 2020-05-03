@@ -25,3 +25,4 @@ C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Proje
 C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.Form_semua_data.resources
 C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.vbproj.CopyComplete
 C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.Form_message.resources
+C:\Users\Kristian\source\repos\Project_GudangKu\Project_GudangKu\obj\Debug\Project_GudangKu.Form_Opname.resources
