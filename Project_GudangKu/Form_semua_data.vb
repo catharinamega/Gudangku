@@ -11,6 +11,7 @@ Public Class Form_semua_data
     Dim dt_seluruhbarang As New DataTable
     Public pilihan_satuan As String
     Dim hapusini As String
+    Public barangID As String
     Private Sub btn_close_Click(sender As Object, e As EventArgs) Handles btn_close.Click
         Me.Close()
     End Sub
@@ -42,24 +43,60 @@ Group By i.item_id"
             MsgBox(ex.Message)
         End Try
     End Sub
+    'Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv.CellClick
+    '    If Form_main_menu.form_from = "UBAH HAPUS DATA" Then
+    '        Try
+    '            With Form_barang_baru
+    '                Form_barang_baru.tb_kode.Text = dgv.Rows(e.RowIndex).Cells(0).Value.ToString
+    '                Form_barang_baru.tb_nama.Text = dgv.Rows(e.RowIndex).Cells(1).Value.ToString
+    '                pilihan_satuan = dgv.Rows(e.RowIndex).Cells(3).Value.ToString
+    '                pilihan_satuan = dgv.Rows(e.RowIndex).Cells(3).Value.ToString
+    '                hapusini = " (" + pilihan_satuan + ")"
+    '                Form_barang_baru.tb_kode.Text = dgv.Rows(e.RowIndex).Cells(0).Value.ToString
+    '                Form_barang_baru.tb_nama.Text = dgv.Rows(e.RowIndex).Cells(1).Value.ToString.Replace(hapusini, "")
+    '            End With
+    '            Form_barang_baru.ShowDialog()
+    '        Catch ex As Exception
+    '            MsgBox(ex.Message)
+    '        End Try
+    '    ElseIf Form_main_menu.form_from = "Stok Opname" Then
+    '        With Form_Opname
+    '            .ShowDialog()
+    '        End With
+    '    End If
+    'End Sub
     Private Sub dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv.CellClick
         If Form_main_menu.form_from = "UBAH HAPUS DATA" Then
             Try
                 With Form_barang_baru
-                    Form_barang_baru.tb_kode.Text = dgv.Rows(e.RowIndex).Cells(0).Value.ToString
-                    Form_barang_baru.tb_nama.Text = dgv.Rows(e.RowIndex).Cells(1).Value.ToString
+                    .tb_kode.Text = dgv.Rows(e.RowIndex).Cells(0).Value.ToString
+                    .tb_nama.Text = dgv.Rows(e.RowIndex).Cells(1).Value.ToString
                     pilihan_satuan = dgv.Rows(e.RowIndex).Cells(3).Value.ToString
+
+                    If dgv.Rows(e.RowIndex).Cells(4).Value.ToString = "Tersedia" Then
+                        .RB_bisagunakan.Checked = True
+                    ElseIf dgv.Rows(e.RowIndex).Cells(4).Value.ToString = "Tidak Tersedia" Then
+                        .RB_tidakdigunakan.Checked = True
+                    End If
+                End With
+
+                With Form_barang_baru
                     pilihan_satuan = dgv.Rows(e.RowIndex).Cells(3).Value.ToString
                     hapusini = " (" + pilihan_satuan + ")"
-                    Form_barang_baru.tb_kode.Text = dgv.Rows(e.RowIndex).Cells(0).Value.ToString
-                    Form_barang_baru.tb_nama.Text = dgv.Rows(e.RowIndex).Cells(1).Value.ToString.Replace(hapusini, "")
+                    .tb_kode.Text = dgv.Rows(e.RowIndex).Cells(0).Value.ToString
+                    .tb_nama.Text = dgv.Rows(e.RowIndex).Cells(1).Value.ToString.Replace(hapusini, "")
                 End With
+
                 Form_barang_baru.ShowDialog()
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
         ElseIf Form_main_menu.form_from = "Stok Opname" Then
             With Form_Opname
+                barangID = dgv.Rows(e.RowIndex).Cells(0).Value.ToString
+                .cb_nama.Text = dgv.Rows(e.RowIndex).Cells(1).Value.ToString
+                .cb_sat.Text = dgv.Rows(e.RowIndex).Cells(3).Value.ToString
+                .TB_sistem.Text = dgv.Rows(e.RowIndex).Cells(2).Value.ToString
                 .ShowDialog()
             End With
         End If

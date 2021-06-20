@@ -47,10 +47,10 @@ Partial Class Form_Opname
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TB_sistem = New System.Windows.Forms.TextBox()
+        Me.TB_riil = New System.Windows.Forms.TextBox()
+        Me.TB_Selisih = New System.Windows.Forms.TextBox()
+        Me.TB_keterangan = New System.Windows.Forms.TextBox()
         Me.btn_masuk = New System.Windows.Forms.Button()
         Me.panel_menu.SuspendLayout()
         Me.panel_waktu.SuspendLayout()
@@ -308,38 +308,38 @@ Partial Class Form_Opname
         Me.Label6.TabIndex = 30
         Me.Label6.Text = "Keterangan"
         '
-        'TextBox1
+        'TB_sistem
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(285, 317)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(298, 29)
-        Me.TextBox1.TabIndex = 31
+        Me.TB_sistem.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TB_sistem.Location = New System.Drawing.Point(285, 317)
+        Me.TB_sistem.Name = "TB_sistem"
+        Me.TB_sistem.Size = New System.Drawing.Size(298, 29)
+        Me.TB_sistem.TabIndex = 31
         '
-        'TextBox2
+        'TB_riil
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(285, 362)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(298, 29)
-        Me.TextBox2.TabIndex = 32
+        Me.TB_riil.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TB_riil.Location = New System.Drawing.Point(285, 362)
+        Me.TB_riil.Name = "TB_riil"
+        Me.TB_riil.Size = New System.Drawing.Size(298, 29)
+        Me.TB_riil.TabIndex = 32
         '
-        'TextBox3
+        'TB_Selisih
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(285, 402)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(298, 29)
-        Me.TextBox3.TabIndex = 33
+        Me.TB_Selisih.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TB_Selisih.Location = New System.Drawing.Point(285, 402)
+        Me.TB_Selisih.Name = "TB_Selisih"
+        Me.TB_Selisih.Size = New System.Drawing.Size(298, 29)
+        Me.TB_Selisih.TabIndex = 33
         '
-        'TextBox4
+        'TB_keterangan
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(145, 467)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(438, 72)
-        Me.TextBox4.TabIndex = 34
+        Me.TB_keterangan.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TB_keterangan.Location = New System.Drawing.Point(145, 467)
+        Me.TB_keterangan.Multiline = True
+        Me.TB_keterangan.Name = "TB_keterangan"
+        Me.TB_keterangan.Size = New System.Drawing.Size(438, 72)
+        Me.TB_keterangan.TabIndex = 34
         '
         'btn_masuk
         '
@@ -361,10 +361,10 @@ Partial Class Form_Opname
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 600)
         Me.Controls.Add(Me.btn_masuk)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TB_keterangan)
+        Me.Controls.Add(Me.TB_Selisih)
+        Me.Controls.Add(Me.TB_riil)
+        Me.Controls.Add(Me.TB_sistem)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -416,9 +416,9 @@ Partial Class Form_Opname
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TB_sistem As TextBox
+    Friend WithEvents TB_riil As TextBox
+    Friend WithEvents TB_Selisih As TextBox
+    Friend WithEvents TB_keterangan As TextBox
     Friend WithEvents btn_masuk As Button
 End Class

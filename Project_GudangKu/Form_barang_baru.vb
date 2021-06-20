@@ -13,72 +13,72 @@ Public Class Form_barang_baru
     Dim autogenerate As String
     Dim dt_insert As New DataTable
     Dim aktiv As Integer
-    Private Sub bt_ok_ubah_click(sender As Object, e As EventArgs) Handles bt_ok_ubah.Click
-        If Form_main_menu.form_from = "UBAH HAPUS DATA" Then
-            Try
-                If RB_bisagunakan.Checked = True Then
-                    aktiv = 0
-                ElseIf RB_tidakdigunakan.Checked = True Then
-                    aktiv = 1
-                End If
-                query = "UPDATE item SET item_name  = '" + tb_nama.Text.ToString + "', amount_type = '" + cb_satuan.SelectedValue + "',
-                item_status = '" + aktiv.ToString + "'
-            WHERE item_id = '" + tb_kode.Text.ToString + "';"
-                connection.Open()
-                commmand = New MySqlCommand(query, connection)
-                commmand.ExecuteNonQuery()
-                With Form_message
-                    .tombol = 1
-                    .pesan = "SUKSES"
-                    .ShowDialog()
-                End With
-                'MsgBox("SUKSES")
-                Form_semua_data.tampilkan_data_barang()
-                connection.Close()
-            Catch ex As Exception
-                connection.Close()
-                MsgBox(ex.Message)
-            End Try
-        ElseIf Form_main_menu.form_from = "DAFTARKAN BARANG BARU" Then
-            Try
-                dt_insert = New DataTable
-                connection.Open()
-                query = "INSERT INTO item VALUES('" + tb_kode.Text + "', '" + tb_nama.Text + " (" + (cb_satuan.SelectedValue.ToString) + ") " + " ',
-                    '""','" + cb_satuan.SelectedValue.ToString + "',0,0)"
-                commmand = New MySqlCommand(query, connection)
-                If tb_kode.Text = "" Or cb_satuan.SelectedItem.ToString = "" Or tb_nama.Text = "" Then
-                    'MsgBox("Data tidak lengkap!")
-                    With Form_message
-                        .tombol = 1
-                        .pesan = "Data tidak lengkap!"
-                        .ShowDialog()
-                    End With
-                ElseIf tb_kode.Text <> "" Or cb_satuan.SelectedItem.ToString <> "" Or tb_nama.Text <> "" Then
-                    Dim result As DialogResult = MsgBox("Are You Sure?'", MsgBoxStyle.YesNo)
-                    If result = DialogResult.Yes Then
-                        ' MsgBox("Inserting data success!", MsgBoxStyle.OkOnly)
-                        commmand.ExecuteNonQuery()
-                        With Form_message
-                            .tombol = 1
-                            .pesan = "Inserting data success!"
-                            .ShowDialog()
-                        End With
-                    ElseIf result = DialogResult.No Then
-                        ' MsgBox("Inserting data canceled!", MsgBoxStyle.OkOnly)
-                        With Form_message
-                            .tombol = 1
-                            .pesan = "Inserting data canceled!"
-                            .ShowDialog()
-                        End With
-                    End If
-                End If
-                connection.Close()
-            Catch ex As Exception
-                connection.Close()
-                MsgBox(ex.Message)
-            End Try
-        End If
-    End Sub
+    'Private Sub bt_ok_ubah_click(sender As Object, e As EventArgs) Handles bt_ok_ubah.Click
+    '    If Form_main_menu.form_from = "UBAH HAPUS DATA" Then
+    '        Try
+    '            If RB_bisagunakan.Checked = True Then
+    '                aktiv = 0
+    '            ElseIf RB_tidakdigunakan.Checked = True Then
+    '                aktiv = 1
+    '            End If
+    '            query = "UPDATE item SET item_name  = '" + tb_nama.Text.ToString + "', amount_type = '" + cb_satuan.SelectedValue + "',
+    '            item_status = '" + aktiv.ToString + "'
+    '        WHERE item_id = '" + tb_kode.Text.ToString + "';"
+    '            connection.Open()
+    '            commmand = New MySqlCommand(query, connection)
+    '            commmand.ExecuteNonQuery()
+    '            With Form_message
+    '                .tombol = 1
+    '                .pesan = "SUKSES"
+    '                .ShowDialog()
+    '            End With
+    '            'MsgBox("SUKSES")
+    '            Form_semua_data.tampilkan_data_barang()
+    '            connection.Close()
+    '        Catch ex As Exception
+    '            connection.Close()
+    '            MsgBox(ex.Message)
+    '        End Try
+    '    ElseIf Form_main_menu.form_from = "DAFTARKAN BARANG BARU" Then
+    '        Try
+    '            dt_insert = New DataTable
+    '            connection.Open()
+    '            query = "INSERT INTO item VALUES('" + tb_kode.Text + "', '" + tb_nama.Text + " (" + (cb_satuan.SelectedValue.ToString) + ") " + " ',
+    '                '""','" + cb_satuan.SelectedValue.ToString + "',0,0)"
+    '            commmand = New MySqlCommand(query, connection)
+    '            If tb_kode.Text = "" Or cb_satuan.SelectedItem.ToString = "" Or tb_nama.Text = "" Then
+    '                'MsgBox("Data tidak lengkap!")
+    '                With Form_message
+    '                    .tombol = 1
+    '                    .pesan = "Data tidak lengkap!"
+    '                    .ShowDialog()
+    '                End With
+    '            ElseIf tb_kode.Text <> "" Or cb_satuan.SelectedItem.ToString <> "" Or tb_nama.Text <> "" Then
+    '                Dim result As DialogResult = MsgBox("Are You Sure?'", MsgBoxStyle.YesNo)
+    '                If result = DialogResult.Yes Then
+    '                    ' MsgBox("Inserting data success!", MsgBoxStyle.OkOnly)
+    '                    commmand.ExecuteNonQuery()
+    '                    With Form_message
+    '                        .tombol = 1
+    '                        .pesan = "Inserting data success!"
+    '                        .ShowDialog()
+    '                    End With
+    '                ElseIf result = DialogResult.No Then
+    '                    ' MsgBox("Inserting data canceled!", MsgBoxStyle.OkOnly)
+    '                    With Form_message
+    '                        .tombol = 1
+    '                        .pesan = "Inserting data canceled!"
+    '                        .ShowDialog()
+    '                    End With
+    '                End If
+    '            End If
+    '            connection.Close()
+    '        Catch ex As Exception
+    '            connection.Close()
+    '            MsgBox(ex.Message)
+    '        End Try
+    '    End If
+    'End Sub
     Sub tb_nama_TextChanged(sender As Object, e As EventArgs) Handles tb_nama.Leave
         Try
             If Form_main_menu.form_from = "DAFTARKAN BARANG BARU" Then
@@ -195,4 +195,79 @@ Public Class Form_barang_baru
     '        MsgBox(ex.Message)
     '    End Try
     'End Sub
+    Private Sub bt_ok_ubah_click(sender As Object, e As EventArgs) Handles bt_ok_ubah.Click
+        If Form_main_menu.form_from = "UBAH HAPUS DATA" Then
+            Try
+                If RB_bisagunakan.Checked = True Then
+                    aktiv = 0
+                ElseIf RB_tidakdigunakan.Checked = True Then
+                    aktiv = 1
+                End If
+                query = "UPDATE item SET item_name  = '" + tb_nama.Text + " (" + (cb_satuan.SelectedValue.ToString) + ")" + "', amount_type = '" + cb_satuan.SelectedValue + "',
+                item_status = '" + aktiv.ToString + "'
+            WHERE item_id = '" + tb_kode.Text.ToString + "';"
+                connection.Open()
+                commmand = New MySqlCommand(query, connection)
+                commmand.ExecuteNonQuery()
+                'MsgBox("SUKSES")
+                With Form_message
+                    .pesan = "SUKSES"
+                    .tombol = 1
+                    .ShowDialog()
+                End With
+                Form_semua_data.tampilkan_data_barang()
+                connection.Close()
+            Catch ex As Exception
+                connection.Close()
+                MsgBox(ex.Message)
+            End Try
+        ElseIf Form_main_menu.form_from = "DAFTARKAN BARANG BARU" Then
+            Try
+                If RB_bisagunakan.Checked = True Then
+                    aktiv = 0
+                ElseIf RB_tidakdigunakan.Checked = True Then
+                    aktiv = 1
+                End If
+                dt_insert = New DataTable
+                connection.Open()
+                query = "INSERT INTO item VALUES('" + tb_kode.Text + "', '" + tb_nama.Text + " (" + (cb_satuan.SelectedValue.ToString) + ")" + " ',
+                    '""','" + cb_satuan.SelectedValue.ToString + "', " + aktiv.ToString + ",0)"
+                commmand = New MySqlCommand(query, connection)
+                If tb_kode.Text = "" Or cb_satuan.SelectedItem.ToString = "" Or tb_nama.Text = "" Then
+                    'MsgBox("Data tidak lengkap!")
+                    With Form_message
+                        .pesan = "Data tidak lengkap!"
+                        .tombol = 1
+                        .ShowDialog()
+                    End With
+                ElseIf tb_kode.Text <> "" Or cb_satuan.SelectedItem.ToString <> "" Or tb_nama.Text <> "" Then
+                    'Dim result As DialogResult = MsgBox("Are You Sure?'", MsgBoxStyle.YesNo)
+                    'If result = DialogResult.Yes Then
+                    '    MsgBox("Inserting data success!", MsgBoxStyle.OkOnly)
+                    '    commmand.ExecuteNonQuery()
+                    'ElseIf result = DialogResult.No Then
+                    '    MsgBox("Inserting data canceled!", MsgBoxStyle.OkOnly)
+                    'End If
+                    With Form_message
+                        .pesan = "Are You Sure?"
+                        .tombol = 2
+                        .ShowDialog()
+                        If .hasil = True Then
+                            .pesan = "Inserting data success!"
+                            .tombol = 1
+                            .ShowDialog()
+                        ElseIf .hasil = False Then
+                            .pesan = "Inserting data canceled!"
+                            .tombol = 1
+                            .ShowDialog()
+                        End If
+                    End With
+                End If
+                connection.Close()
+            Catch ex As Exception
+                connection.Close()
+                MsgBox(ex.Message)
+            End Try
+        End If
+    End Sub
 End Class
